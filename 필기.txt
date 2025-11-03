@@ -1,0 +1,29 @@
+프로젝트 설정 내용
+1. MVC Project
+2. MyBatis(인터페이스 매퍼)
+3. Tiles
+4. Security
+5. FileUpload
+6. Ajax > REST Controller
+
+
+MyBatis > MyBatisSimpleTest or SecurityTest
+- pom.xml
+- root-context
+- 단위테스트 > 
+
+Tiles > TileTest
+- pom.xml
+- servlet-context.xml
+
+security > SecurityTest
+- pom.xml
+- web.xml
+
+project > script.sql
+
+FileUpload > FileTest
+- web.xml
+
+Ajax > REST Controller
+- jackson
