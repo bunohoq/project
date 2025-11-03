@@ -1,5 +1,9 @@
 package com.test.project.restcontroller;
 
-public class AjaxController {
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+public class AjaxController {
+	
+	
 }

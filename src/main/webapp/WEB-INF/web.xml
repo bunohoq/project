@@ -28,7 +28,6 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 		
-		
 		<multipart-config>
 			<location>c:\\code\\spring\\temp</location>
 			<max-file-size>10485760</max-file-size>

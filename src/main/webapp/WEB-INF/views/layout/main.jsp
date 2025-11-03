@@ -10,7 +10,18 @@
 </head>
 <body>	
 	<!-- main.jsp -->
-	<h1>Template Page</h1>
+	<header>
+		<h1>Spring Project</h1>
+		<ul>
+			<li><a href="/project/member/add">회원가입</a></li>
+			<li><a href="/project/member/login">로그인</a></li>
+			<li><a href="/project/member/logout">로그아웃</a></li>
+		</ul>
+	</header>
+	
+	<div>
+	
+	</div>
 	
 	
 </body>

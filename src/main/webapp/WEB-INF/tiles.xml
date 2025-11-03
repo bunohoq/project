@@ -6,6 +6,6 @@
        
 <tiles-definitions>
 	
-	<definition name="index" template="/WEB-INF/views/layout/main.jsp"></definition>	
+	<definition name="*" template="/WEB-INF/views/layout/main.jsp"></definition>	
 
 </tiles-definitions>
