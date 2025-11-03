@@ -6,4 +6,6 @@ public interface MemberMapper {
 
 	UserDTO get(String username);
 
+	void add(UserDTO dto);
+
 }

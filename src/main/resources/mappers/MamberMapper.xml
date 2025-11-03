@@ -3,12 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- MemberMapper.xml -->  
 <mapper namespace="com.test.project.mapper.MemberMapper">
 	
-	<select id="get" resultType="com.test.project.model.UserDTO">
-	
-		<!-- username, password, enabled -->
+	<select id="get" parameterType="String" resultType="udto">
+		
 		select 
 			id,
 			name,
@@ -19,6 +17,14 @@
 			auth
 		from tblUser
 			where id = #{username}
-	 </select>
+		
+	</select>
+	
+	<insert id="add" parameterType="udto">
+		
+		insert into tblUser (id, name, pw, email, age, regdate, auth)
+			values (#{id}, #{name}, #{pw}, #{email}, #{age}, default, 'ROLE_MEMBER')			
+		
+	</insert>
+	
 </mapper>
-

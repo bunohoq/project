@@ -16,3 +16,6 @@ insert into tblUser values ('hong', '홍길동','1111','hong@gmail.com', 20, def
 commit;
 
 delete from tblUser where id='hong';
+
+
+select * from tblUser;

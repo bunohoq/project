@@ -4,15 +4,14 @@
 	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-		
-		
+
 	<!-- 403 에러 처리 -->
 	<bean id="customAccessDeniedHandler" class="com.test.project.auth.CustomAccessDeniedHandler" />
 	
 	<!-- 로그인 성공 처리 -->
 	<bean id="customLoginSuccessHandler" class="com.test.project.auth.CustomLoginSuccessHandler" />
 		
-	<!-- 암호화 인코더 -->	
+	<!-- 암호화 인코더 -->
 	<bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 	
 	<!-- 로그인 처리 -->
@@ -21,19 +20,22 @@
 	<security:http>
 	
 		<security:intercept-url pattern="/" access="permitAll" />
-
-		<!-- <security:intercept-url pattern="/" access="hasRole('ROLE_MEMBER')" /> -->
 		
-		<!-- <security:intercept-url pattern="/member.do" 
+		<!-- <security:intercept-url pattern="/" 
+					access="hasRole('ROLE_MEMBER')" /> -->
+		
+		<!-- 
+		<security:intercept-url pattern="/member.do" 
 					access="hasRole('ROLE_MEMBER')" />
 		<security:intercept-url pattern="/admin.do" 
-					access="hasRole('ROLE_ADMIN')" /> -->
+					access="hasRole('ROLE_ADMIN')" /> 
+		-->
 							
 		<security:access-denied-handler ref="customAccessDeniedHandler" />
 		
-		<security:logout logout-url="/logout.do" invalidate-session="true" logout-success-url="/index.do" />
+		<security:logout logout-url="/member/logout" invalidate-session="true" logout-success-url="/" />
 		
-		<security:form-login login-page="/login.do" authentication-success-handler-ref="customLoginSuccessHandler" />
+		<security:form-login login-page="/member/login" authentication-success-handler-ref="customLoginSuccessHandler" />
 		
 	</security:http>
 	
@@ -44,4 +46,3 @@
 	</security:authentication-manager>
 
 </beans>
-

@@ -9,22 +9,11 @@ import com.test.project.mapper.MemberMapper;
 import com.test.project.model.CustomUser;
 import com.test.project.model.UserDTO;
 
-
-//User > CustomUser 사용
-
-public class CustomUserDetailsService implements UserDetailsService{
-
-	//DB > select > User
-	
-	//1. /.customlogin.do > 아이디(hong), 암호(1111) 입력
-	//2. POST + /login > 인증 처리
-	//2. 2번과 더불어 loadUserByUsername() 호출
-	
+public class CustomUserDetailsService implements UserDetailsService {
 	
 	@Autowired
 	private MemberMapper mapper;
 	
-	//로그인 발생 시 같이 호출
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
@@ -32,6 +21,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 		
 		return dto != null ? new CustomUser(dto) : null;
 	}
-	
 
+	
 }
+
