@@ -13,6 +13,10 @@
 		<sec:authorize access="isAuthenticated()">
 		<li><a href="#!" id="btnLogout">로그아웃</a></li>
 		</sec:authorize>
+		
+		<li class="divider"></li>
+		
+		<li><a href="/project/board/list">게시판</a></li>
 	</ul>
 </header>
 <form method="POST" action="/project/member/logout" id="formLogout">
@@ -24,3 +28,4 @@
 		document.getElementById('formLogout').submit();
 	};
 </script>
+

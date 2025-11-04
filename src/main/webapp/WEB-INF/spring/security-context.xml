@@ -21,6 +21,14 @@
 	
 		<security:intercept-url pattern="/" access="permitAll" />
 		
+		<security:intercept-url pattern="/board/add" 
+					access="hasRole('ROLE_MEMBER')" />
+		<security:intercept-url pattern="/board/edit" 
+					access="hasRole('ROLE_MEMBER')" />	
+		<security:intercept-url pattern="/board/del" 
+					access="hasRole('ROLE_MEMBER')" />				
+		
+		
 		<!-- <security:intercept-url pattern="/" 
 					access="hasRole('ROLE_MEMBER')" /> -->
 		
@@ -46,3 +54,4 @@
 	</security:authentication-manager>
 
 </beans>
+

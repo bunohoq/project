@@ -8,6 +8,7 @@
 	<typeAliases>
 		
 		<typeAlias type="com.test.project.model.UserDTO" alias="udto"/>
+		<typeAlias type="com.test.project.model.BoardDTO" alias="bdto"/>
 		
 	</typeAliases>
 	
